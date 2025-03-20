@@ -42,6 +42,12 @@ console.log(getContact("MyAddressBook", "Bob"));
 console.log("\n✏️ Editing Contact...");
 editContact("MyAddressBook", "Alice", { phoneNumber: "111-222-3333", email: "new.email@example.com" });
 
+//✅ Count Contact by city or state
+const countContactsByCityState = require('./countContactsByCityState');
+
+console.log("📊 Contact Counts by City & State:");
+console.log(countContactsByCityState("MyAddressBook")); 
+
 // ✅ Viewing Contacts After Edit
 console.log("\n📋 Viewing All Contacts After Edit...");
 viewContacts("MyAddressBook");
