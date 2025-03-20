@@ -1,7 +1,10 @@
-const addressBook = require('./addressBook');
+const addressBookManager = require('./addressBookManager');
 
-function getContact(id) {
-    return addressBook.getContactById(id);
+function getContact(addressBookName, id) {
+    const addressBook = addressBookManager.getAddressBook(addressBookName);
+    if (!addressBook) return null; 
+
+    return addressBook.find(contact => contact.id === id);
 }
 
 module.exports = getContact;
