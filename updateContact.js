@@ -4,4 +4,4 @@ function updateContact(id, updatedInfo) {
     return addressBook.updateContact(id, updatedInfo);
 }
 
-module.exports = updateContact;
+module.exports = updateContact; // ✅ Ensure it's correctly exported
