@@ -67,3 +67,16 @@ deleteContact("MyAddressBook", "Bob");
 // ✅ Viewing Contacts After Deletion
 console.log("\n📋 Viewing All Contacts After Deletion...");
 viewContacts("MyAddressBook");
+
+//Sort contact 
+const sortContacts = require('./sortContacts');
+
+console.log("📌 Sorting Contacts by City:");
+console.log(sortContacts("MyAddressBook", "city"));
+
+console.log("📌 Sorting Contacts by State:");
+console.log(sortContacts("MyAddressBook", "state"));
+
+console.log("📌 Sorting Contacts by Zip:");
+console.log(sortContacts("MyAddressBook", "zip"));
+
